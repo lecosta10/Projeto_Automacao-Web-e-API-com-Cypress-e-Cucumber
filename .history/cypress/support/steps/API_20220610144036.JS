@@ -1,0 +1,15 @@
+//Cypress.on('uncaught:exception', () => false)
+import {Given, And, When, Then} from "cypress-cucumber-preprocessor/steps"
+
+Given("que eu tenha acesso ao endpoint", () => {
+   
+})
+When ("realizo um GET na url {string}", () => {
+   
+})
+Then ("deve retornar o status code 200",()=>{
+   
+})
+And ("deve exibir o conteúdo do campo {string} da estrutura {string}", () => {
+
+})
