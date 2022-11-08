@@ -5,22 +5,18 @@ class buscaPage {
     CampoBusca(){
         cy.get('#mobileSearch > .roboto-medium').click()
     }
-
     Busca(){
         cy.get('#mobileSearch > .roboto-medium').type('tablets')
     }
-
     ValidarBusca(){
-        cy.contains('TABLETS').should('be.visible')
+        cy.contains('bolsa').should('be.visible')
         
     }
-
     Autocomplete(){
-         cy.get('#mobileSearch > .roboto-medium').type('MI')
+         cy.get('#search-input').type('sapa')
     } 
-    
     ValidaAltocomplete(){
-         cy.contains('MICE').should('be.visible')    
+         cy.contains('sapato').should('be.visible')    
     }          
 }
 

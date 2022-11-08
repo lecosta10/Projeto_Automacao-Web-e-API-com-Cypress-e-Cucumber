@@ -1,3 +1,4 @@
+import buscaPage from "../pageobjects/buscaPage";
 import carrinhoPage from "../pageobjects/carrinhoPage";
 import pagamentoPage from "../pageobjects/pagamentoPage";
 
@@ -11,7 +12,9 @@ Given("que sou usuario logado no sistema", () => {
     loginPage.confirmarLogin();    
 })
 And ("eu tenha um produto no carrinho", () => { 
- pagamentoPage.carrinho();   
+    carrinhoPage.clickCategoria();
+    carrinhoPage.Produto();
+    carrinhoPage.ComprarClick();    
 })
 When ("eu clicar em {string}", () => { 
      pagamentoPage.FinalizarCliCk();
@@ -29,28 +32,24 @@ Given("que sou usuario logado no sistema", () => {
     loginPage.ClickAcessar(); 
     loginPage.confirmarLogin();    
 })
-
 And ("eu tenha um produto no carrinho", () => { 
-    pagamentoPage.carrinho();    
+    carrinhoPage.clickCategoria();
+    carrinhoPage.Produto();
+    carrinhoPage.ComprarClick();    
 })
-
 When ("eu me direcionar a tela de pagamento", () => { 
     pagamentoPage.FinalizarCliCk();
     pagamentoPage.TelaPagamento();
 })
-
 Then ("deve exibir o resumo do pedido", () => { 
     pagamentoPage.Resumo();
 })
-
 And ("deve exibir o endereco principal", () => { 
     pagamentoPage.Endereco();
 })
-
 And ("deve exibir as opcoes de pagamento", () => { 
     pagamentoPage.Opcoes();
 })
-
 And ("deve exibir o valor total", () => { 
    pagamentoPage.Valor();
 })

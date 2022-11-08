@@ -23,20 +23,20 @@ class carrinhoPage {
         cy.get('thead > tr > :nth-child(6) > .roboto-light').should('be.visible')
     }
 
-    Total(){
-        cy.get('[colspan="2"] > .roboto-light').should('be.visible')
+    Resumo(){
+        cy.contains('Resumo da compra').should('be.visible') 
     }
 
-    NomeProduto(){
-        cy.get('thead > tr > :nth-child(2) > .roboto-light').should('be.visible')
+    frete(){
+        cy.contains('Simule frete e prazo de entrega').should('be.visible')
     }
 
     Valor(){
-        cy.get(':nth-child(6) > .price').should('be.visible')
+        cy.get('[qa-auto="cart-price"]').should('be.visible')
     }
-
+    
     Finalizar(){
-        cy.get('#checkOutButton').should('be.visible')
+        cy.get('.arrow__icon').should('be.visible')
     }   
 }
 

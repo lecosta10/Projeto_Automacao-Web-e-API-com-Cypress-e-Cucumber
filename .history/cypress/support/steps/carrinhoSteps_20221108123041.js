@@ -44,12 +44,12 @@ When ("eu visualizar a tela", () => {
     carrinhoPage.ProdutoCarrinho(); 
 })
 
-Then ("deve ser exibido o valor total da compra", () => { 
-    carrinhoPage.Total(); 
+Then ("deve ser exibido um resumo da compra", () => { 
+    carrinhoPage.Resumo(); 
 })
 
-And ("deve exibir o nome do produto", () => { 
-     carrinhoPage.NomeProduto();
+And ("deve exibir a opcao de frete", () => { 
+     carrinhoPage.frete();
 })
 
 And ("deve exibir o valor do produto", () => { 

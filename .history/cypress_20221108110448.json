@@ -3,5 +3,5 @@
     "viewportHeight": 768,
     "defaultCommandTimeout": 700000,
     "testFiles": "**/*.feature",
-    "baseUrl": "https://www.advantageonlineshopping.com/#/"
+    "baseUrl": "https://www.shoestock.com.br/"
 }

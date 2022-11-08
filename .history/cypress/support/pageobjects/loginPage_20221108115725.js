@@ -6,16 +6,13 @@ class loginPage {
         cy.visit("/")
         cy.get('#menuUser').click()
     }
-    
     RealizarLogin(){
         cy.get('[a-hint="Username"] > .inputContainer > .ng-pristine').type('teste2021')
         cy.get('[a-hint="Password"] > .inputContainer > label').type("Teste@2021")
     }
-
     ClickAcessar(){
         cy.get('#sign_in_btnundefined').click()
     }
-
     confirmarLogin(){
         cy.get('#menuUserLink').should('be.visible')
         cy.get('#shoppingCartLink').should('be.visible')

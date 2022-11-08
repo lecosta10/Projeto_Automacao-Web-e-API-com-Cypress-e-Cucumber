@@ -5,19 +5,16 @@ import {Given, Then, When, And} from "cypress-cucumber-preprocessor/steps"
 import loginPage from '../pageobjects/loginPage';
 // const loginPage = new loginPage
 
-Given("que acesso a pagina Advantage Demo", () => {
-    loginPage.Redirect();
+Given(/^que acesso a pagina Advantage Demo$/, () => {
+    cy.visit("/")
     } 
 )
-
-Then("preencher os campos de Login", () => {
+Then(/^preencher os campos de Login$/, () => {
     loginPage.RealizarLogin();
 })
-
-And("clicar em Acessar Conta Entrar", () => {
+And(/^clicar em Acessar Conta Entrar$/, () => {
     loginPage.ClickAcessar();
 })
-
-When("realizo o login com sucesso", () => {
+When(/^realizo o login com sucesso$/, () => {
     loginPage.confirmarLogin();
 })
